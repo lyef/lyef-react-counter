@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 const propTypes = {
-    start: React.PropTypes.number.isRequired,
-    end: React.PropTypes.number.isRequired,
-    done: React.PropTypes.func,
+    start: PropTypes.number.isRequired,
+    end: PropTypes.number.isRequired,
+    done: PropTypes.func,
 };
 
 class Counter extends React.Component {
