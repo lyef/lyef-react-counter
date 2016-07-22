@@ -19,9 +19,9 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var propTypes = {
-    start: _react2['default'].PropTypes.number.isRequired,
-    end: _react2['default'].PropTypes.number.isRequired,
-    done: _react2['default'].PropTypes.func
+    start: _react.PropTypes.number.isRequired,
+    end: _react.PropTypes.number.isRequired,
+    done: _react.PropTypes.func
 };
 
 var Counter = function (_React$Component) {
@@ -33,6 +33,9 @@ var Counter = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Counter).call(this, props));
 
         _this.state = { count: props.start };
+
+        _this.increment = _this.increment.bind(_this);
+        _this.decrement = _this.decrement.bind(_this);
         return _this;
     }
 
@@ -40,18 +43,12 @@ var Counter = function (_React$Component) {
         key: 'componentWillMount',
         value: function () {
             function componentWillMount() {
-                var _this2 = this;
-
                 this.setState({ count: this.props.start });
 
                 if (this.props.start < this.props.end) {
-                    this.intervalId = setInterval(function () {
-                        return _this2.increment();
-                    }, 1000);
+                    this.intervalId = setInterval(this.increment, 1000);
                 } else {
-                    this.intervalId = setInterval(function () {
-                        return _this2.decrement();
-                    }, 1000);
+                    this.intervalId = setInterval(this.decrement, 1000);
                 }
             }
 
