@@ -3,8 +3,8 @@ import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import { shallow, mount } from 'enzyme';
-import Counter from '../../src/Counter';
 import assertEqualJSX from 'assert-equal-jsx';
+import Counter from '../../src/Counter';
 chai.use(sinonChai);
 
 describe('Component Counter', () => {
