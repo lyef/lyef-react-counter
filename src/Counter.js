@@ -11,15 +11,18 @@ class Counter extends React.Component {
     constructor(props) {
         super(props);
         this.state = { count: props.start };
+
+        this.increment = this.increment.bind(this);
+        this.decrement = this.decrement.bind(this);
     }
 
     componentWillMount() {
         this.setState({ count: this.props.start });
 
         if (this.props.start < this.props.end) {
-            this.intervalId = setInterval(() => this.increment(), 1000);
+            this.intervalId = setInterval(this.increment, 1000);
         } else {
-            this.intervalId = setInterval(() => this.decrement(), 1000);
+            this.intervalId = setInterval(this.decrement, 1000);
         }
     }
 
