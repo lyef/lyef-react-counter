@@ -1,7 +1,7 @@
 {
-  "name": "react-component-base",
+  "name": "lyef-react-counter",
   "version": "0.1.0",
-  "description": "An opinionated structure for reusable and declouped react components.",
+  "description": "Simple increment and decrement counter react component.",
   "main": "dist/Counter.js",
   "scripts": {
     "build": "npm run clean && ./node_modules/.bin/babel src -d dist",
@@ -19,19 +19,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/willianjusten/react-component-base.git"
+    "url": "git+ssh://git@github.com/lyef/lyef-react-counter.git"
   },
   "keywords": [
     "react",
     "component",
     "base"
   ],
-  "author": "Willian Justen de Vasconcellos <willianjustenqui@gmail.com> (http://willianjusten.com.br/)",
+  "author": "lyef (https://lyef.github.io/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/willianjusten/react-component-base/issues"
+    "url": "https://github.com/lyef/lyef-react-counter/issues"
   },
-  "homepage": "https://github.com/willianjusten/react-component-base#README",
+  "homepage": "https://github.com/lyef/lyef-react-counter#README",
   "devDependencies": {
     "@kadira/storybook": "^1.38.0",
     "assert-equal-jsx": "^1.0.3",
