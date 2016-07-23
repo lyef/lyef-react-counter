@@ -1,85 +1,38 @@
-# React base component
-[![Build Status](https://travis-ci.org/willianjusten/react-base-component.svg)](https://travis-ci.org/willianjusten/react-base-component)
+# React Counter
+[![Build Status](https://travis-ci.org/lyef/lyef-react-counter.svg)](https://travis-ci.org/lyef-react-counter)
 
-## Stack
-
-- [React/React-DOM/React-addons-test-utils 15.x](https://facebook.github.io/react/)
-- [Babel 6](https://babeljs.io/) - Javascript Compiler.
-- [React Storybook](https://github.com/kadirahq/react-storybook) - Isolated environment for your components.
-- [Eslint](http://eslint.org/) - The pluggable linting utility for JavaScript and JSX.
-- [Husky](https://github.com/typicode/husky) - Git hooks made easy.
-- [Mocha](https://mochajs.org/) - JavaScript test framework.
-- [Chai](http://chaijs.com/) - BDD / TDD assertion library.
-- [Sinon](http://sinonjs.org/) - Standalone test spies, stubs and mocks for JavaScript.
-- [Nyc](https://github.com/istanbuljs/nyc) - Istanbul command line interface.
-- [Enzyme](http://airbnb.io/enzyme/) - JavaScript Testing utility for React.
-- [JSDOM](https://github.com/tmpvar/jsdom) - A JavaScript implementation of the WHATWG DOM and HTML standards.
 
 ## Getting Started
 
 ### Installation
 
-First of all, install the dependencies to run this boilerplate.
-
 ```sh
-# install dependencies
-$ npm install
+$ npm install --save lyef-react-counter
 ```
 
-### Folders and Files
+### Usage
 
-```sh
-├── css
-│   └── main.css
-├── dist
-│   └── Foo.js
-├── src
-│   └── Foo.js
-├── stories
-│   └── Foo.js
-├── storybook
-│   ├── config.js
-│   └── webpack.config.js
-├── tests
-│   ├── helpers
-│   │   └── setup.js
-│   └── specs
-│       └── Foo.spec.js
-├── .babelrc
-├── .editorconfig
-├── .eslintrc
-├── .gitignore
-├── .npmignore
-├── Readme.md
-└── package.json
+```jsx
+import Counter from 'lyef-react-counter';
+
+const doneCallback = () => console.log('done'); // Does something when count ends
+
+// Normal Counting
+<Counter start={0} end={10} done={doneCallback} />
+
+// Countdown
+<Counter start={10} end={0} done={doneCallback} />
 ```
 
-### How to Develop with Storybook
+[Live examples](https://lyef.github.io/lyef-react-counter)
 
-Create your [storybook stories](https://github.com/kadirahq/react-storybook/blob/master/docs/writing_stories.md) on `stories` folder. If you want to create another story file, remember to load on `.storybook/config.js`. With all stories, just run `npm run storybook` to open your isolated environment.
+## Architecture
 
-If you want to know more about storybook, [see this link](https://github.com/kadirahq/react-storybook).
+We develop this component using a [<name>](<link>).
 
-### Code Standarts
-
-This project uses [eslint](http://eslint.org/) and [.editorconfig](http://editorconfig.org/) is defined to have indent_size of **4 spaces**.
-
-This project also uses [Husky](https://github.com/typicode/husky) to prevent push messy and wrong code. Please, don't be stupid, fix all errors before push =D
-
-### Tasks
-
-* `npm run build`: build component to external use.
-* `npm run pub`: build and publish the component to npm.
-* `npm run storybook`: launch storybook to develop your component.
-* `npm run build-storybook`: build an static storybook to `.out` folder.
-* `npm run deploy-storybook`: build and deploy a storybook with component to gh-pages.
-* `npm run test`: run all specs.
-* `npm run test:tdd`: run all specs and watch.
-* `npm run test:coverage`: run all specs and coverage.
-* `npm run lint`: lint all files searching for errors.
-* `npm run lint:fix`: fix some lint errors.
+To know more about the architecture or if you want to contribute with this Counter component see the [contributing documentation](https://github.com/lyef/lyef-react-counter/blob/master/CONTRIBUTING.md).
 
 ## License
 
-[MIT License](https://github.com/willianjusten/react-base-component/blob/master/LICENSE.md) @ [Willian Justen](https://willianjusten.com.br)
+[MIT License](https://github.com/lyef/lyef-react-counter/blob/master/LICENSE.md) @ [lyef](https://lyef.github.io/)
 
