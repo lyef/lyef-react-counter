@@ -1,7 +1,7 @@
 # Lyef React Counter
 [![Build Status](https://travis-ci.org/lyef/lyef-react-counter.svg)](https://travis-ci.org/lyef/lyef-react-counter)
-![](https://badge-size.herokuapp.com/lyef/lyef-react-counter/master/dist/Counter.min.js.svg)
-![](https://badge-size.herokuapp.com/lyef/lyef-react-counter/master/dist/Counter.min.js.svg?compression=gzip)
+![size](https://badge-size.herokuapp.com/lyef/lyef-react-counter/master/dist/Counter.min.js.svg)
+![gzip size](https://badge-size.herokuapp.com/lyef/lyef-react-counter/master/dist/Counter.min.js.svg?compression=gzip)
 
 
 ## Getting Started
